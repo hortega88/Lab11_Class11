@@ -1,12 +1,23 @@
 "use strict";
 
 //Dynamic background color change
-const color = ['#F0E68C', '#FFDAB9', '#FFE4B5', '#D8BFD8', '#B0E0E6', '#AFEEEE', '#E0FFFF', '#98FB98', '#FFDEAD', '#F5DEB3'];
+const color = [
+  "#F0E68C",
+  "#FFDAB9",
+  "#FFE4B5",
+  "#D8BFD8",
+  "#B0E0E6",
+  "#AFEEEE",
+  "#E0FFFF",
+  "#98FB98",
+  "#FFDEAD",
+  "#F5DEB3",
+];
 
 let index = 0;
 setInterval(() => {
   document.body.style.backgroundColor = color[index];
-  index = (index + 1);
+  index = index + 1;
 }, 2000); // change color every second
 
 var input = document.getElementById("input"), // input/output button
@@ -138,3 +149,7 @@ result.addEventListener("click", function () {
 clear.addEventListener("click", function () {
   input.innerHTML = "";
 });
+
+let nameUser = "Harry";
+let idUser = "CT1006148";
+document.getElementById("nameAndId").textContent = nameUser + " - " + idUser;
